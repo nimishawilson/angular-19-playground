@@ -3,7 +3,19 @@
 
 ## Angular 19 
 
-- From Angular 19, standalone is true by default when creating new projects
+#### standalone is true by default
+From Angular 19, standalone is true by default when creating new projects. When we create a new project or create a new component, by default, it will be a standalone component(standalone metadata will not be there even if its standalone component). We have to add standalone metadata as false, if we don't want the component as standalone component.
+
+We can strictly enforce standalone(true) for all component by configuring this in tsconfig.json.
+
+```
+{
+  "angularCompilerOptions": {
+    "strictStandalone": true
+  }
+}
+
+```
 
 - Stabilization of signal APIs
 
